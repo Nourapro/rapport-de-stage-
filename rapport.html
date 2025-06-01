@@ -79,6 +79,28 @@
       border-radius: 8px;
     }
 
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0066cc;
+    }
+
     footer {
       background-color: #e1e8f0;
       text-align: center;
@@ -119,11 +141,16 @@
     document.addEventListener('DOMContentLoaded', () => {
       const toggle = document.getElementById('menu-toggle');
       const navLinks = document.querySelector('.nav-links');
-
       toggle.addEventListener('change', () => {
         navLinks.classList.toggle('show');
       });
     });
+
+    function imprimerPDF() {
+      const win = window.open("https://nourapro.github.io/rapport-de-stage-/rapport-de-stage.pdf", "_blank");
+      win.focus();
+      win.print();
+    }
   </script>
 </head>
 <body>
@@ -145,15 +172,15 @@
 
   <main>
     <h2>Rapport de stage – Version interactive</h2>
-    <p>Ci-dessous, vous pouvez consulter le rapport de stage directement en ligne. Vous pouvez également le télécharger.</p>
+    <p>Ci-dessous, vous pouvez consulter le rapport de stage directement en ligne. Vous pouvez également le télécharger ou l’imprimer.</p>
 
-    <iframe src="https://github.com/Nourapro/rapport-de-stage-/raw/main/rapport-de-stage.pdf"></iframe>
+    <!-- Affichage du PDF via GitHub Pages -->
+    <iframe src="https://nourapro.github.io/rapport-de-stage-/rapport-de-stage.pdf"></iframe>
 
-    <p style="text-align:center; margin-top: 20px;">
-      <a href="https://github.com/Nourapro/rapport-de-stage-/raw/main/rapport-de-stage.pdf" class="btn" target="_blank">
-        📄 Télécharger le rapport PDF
-      </a>
-    </p>
+    <div class="button-container">
+      <a href="https://nourapro.github.io/rapport-de-stage-/rapport-de-stage.pdf" class="btn" target="_blank">📄 Télécharger le PDF</a>
+      <button class="btn" onclick="imprimerPDF()">🖨️ Imprimer le PDF</button>
+    </div>
   </main>
 
   <footer>
