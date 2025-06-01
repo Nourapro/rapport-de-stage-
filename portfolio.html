@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portefolio – Stage QHSSE – Noura Benherri</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f7fc;
+      color: #002b5b;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin: 0;
+      color: #002b5b;
+    }
+
+    nav {
+      position: relative;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #004080;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #0066cc;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+
+    main {
+      max-width: 960px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2, h3 {
+      color: #002b5b;
+    }
+
+    ul.task-list {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    ul.task-list li {
+      margin-bottom: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-left: 10px;
+      padding: 6px 12px;
+      background-color: #004080;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0066cc;
+    }
+
+    footer {
+      background-color: #e1e8f0;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        background-color: #ffffff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        display: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: block;
+        color: #004080;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      toggle.addEventListener('change', () => {
+        navLinks.classList.toggle('show');
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/logo-airtech.png" alt="Logo Airtech Europe" class="logo">
+      <h1>Stage QHSSE – Noura Benherri</h1>
+    </div>
+    <nav>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="portfolio.html" class="active">Portefolio</a></li>
+        <li><a href="rapport.html">Rapport de stage</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Travaux réalisés durant le stage</h2>
+
+    <section>
+      <h3>1. Digitalisation des outils HSE</h3>
+      <ul class="task-list">
+        <li>Formulaire digitalisé de déclaration HSE <a href="docs/Formulaire_Declaration_HSE.xlsx" class="btn" target="_blank">Télécharger</a></li>
+        <li>Tableau de suivi des déchets <a href="docs/Suivi_Dechets_Airtech.xlsx" class="btn" target="_blank">Télécharger</a></li>
+        <li>Outil de suivi des non-conformités <a href="docs/Suivi_NonConformites.xlsx" class="btn" target="_blank">Télécharger</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>2. Sécurité et gestion des produits dangereux</h3>
+      <ul class="task-list">
+        <li>Mise à jour des FDS via SEIRICH <a href="docs/SEIRICH_Mise_A_Jour.pdf" class="btn" target="_blank">Télécharger</a></li>
+        <li>Fiches Simplifiées de Sécurité (FSS) <a href="docs/FSS_Produits_Dangereux.pdf" class="btn" target="_blank">Télécharger</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>3. Affiches et sensibilisation HSE</h3>
+      <ul class="task-list">
+        <li>Affiches zones à risque et EPI <a href="docs/Affiches_HSE_Zone.pdf" class="btn" target="_blank">Télécharger</a></li>
+        <li>Signalétique des premiers secours <a href="docs/Affiches_Premiers_Secours.pdf" class="btn" target="_blank">Télécharger</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>4. Interventions et coordination sur le terrain</h3>
+      <ul class="task-list">
+        <li>Organisation des enlèvements de fûts et déchets chimiques</li>
+        <li>Participation aux audits environnementaux internes</li>
+        <li>Inspection des dispositifs de premiers secours</li>
+        <li>Coordination pour la mise à jour des affichages réglementaires</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Noura Benherri – Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
