@@ -18,59 +18,44 @@
       padding: 40px 60px;
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: center;
       flex-wrap: wrap;
     }
 
-    .left-block {
+    .identity {
       flex: 1 1 400px;
     }
 
-    .left-block h1 {
+    .identity h1 {
       font-size: 2.5rem;
       margin: 0;
       color: #ffffff;
     }
 
-    .left-block p {
+    .identity p {
       font-size: 1.2rem;
       color: #cbd5e1;
       margin: 5px 0 20px;
     }
 
-    .left-block strong {
+    .identity strong {
       font-family: cursive;
       font-size: 1.8rem;
       color: #f0a500;
     }
 
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex: 1;
+    }
+
     .logo-airtech {
       height: 60px;
-      background-color: #fff;
+      background-color: #ffffff;
       padding: 10px 15px;
       border-radius: 8px;
-      margin-top: 20px;
-    }
-
-    .right-block {
-      background-color: #1b263b;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-      max-width: 320px;
-      margin-top: 20px;
-    }
-
-    .right-block h2 {
-      color: #f0a500;
-      font-size: 1.4rem;
-      margin-bottom: 10px;
-    }
-
-    .right-block p {
-      color: #e0e0e0;
-      line-height: 1.6;
-      font-size: 0.95rem;
     }
 
     nav {
@@ -130,6 +115,26 @@
       margin-right: 6px;
     }
 
+    .profile-block {
+      background-color: #1b263b;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      margin-top: 60px;
+    }
+
+    .profile-block h2 {
+      color: #f0a500;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+
+    .profile-block p {
+      font-size: 1rem;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -137,30 +142,69 @@
         padding: 30px;
       }
 
-      .right-block {
-        margin-top: 30px;
-        width: 100%;
-        max-width: 100%;
+      .logo-container {
+        justify-content: flex-start;
+        margin-top: 20px;
       }
 
       nav a {
         padding: 14px 20px;
+      }
+
+      .profile-block {
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- ✅ En-tête avec nom, stage et logo -->
   <header>
-    <div class="left-block">
+    <div class="identity">
       <strong>Portefólio</strong>
       <h1>Noura Benherri</h1>
-      <p>Stage QHSSE – Airtech Europe</p>
+      <p>Stage HSE – Airtech Europe</p>
+    </div>
+    <div class="logo-container">
       <img src="logo-airtech.png" alt="Logo Airtech" class="logo-airtech">
     </div>
+  </header>
 
-    <!-- ✅ Présentation professionnelle à droite -->
-    <div class="right-block">
+  <!-- ✅ Menu de navigation -->
+  <nav>
+    <a href="index.html" class="active">ACCUEIL</a>
+    <a href="portfolio.html">PORTFOLIO</a>
+    <a href="rapport.html">RAPPORT DE STAGE</a>
+  </nav>
+
+  <!-- ✅ Contenu principal -->
+  <main>
+    <h2>Présentation de l’entreprise : Airtech Europe Sàrl</h2>
+    <p>
+      Fondée en 1991 à Luxembourg, Airtech Europe Sàrl est le siège Européen de Airtech Advanced Materials Group, le leader dans la fabrication et la distribution des matériaux de mise sous vide nécessaires à la fabrication des pièces et moules en composite, par les techniques d’infusion de résine ou avec préimprégnés avec polymérisation en autoclave et de stratification par voie humide.
+    </p>
+    <p>
+      Notre très large gamme comprend des produits fonctionnant de la température ambiante jusqu’à 426 °C : des films de mise sous vide, des films de démoulage, des rubans adhésifs, produits démoulants (non liquide), tissus d’arrachage, mastics d’étanchéité, grilles de drainage, feutres de drainage, des valves et tuyaux, des résines pour outillage, des caoutchoucs, des pré-imprégnés et résines pour l’infusion.
+    </p>
+    <p>
+      Airtech fournit les industries aéronautiques, éoliennes, automobiles, bateaux, fabrications composites diverses, circuits imprimés et énergie solaire. Airtech a six sites dans le monde entier : Huntington Beach, California, USA ; Chino, California, USA ; Springfield, Tennessee, USA ; Differdange, Luxembourg ; Chadderton, England ; et Tianjin, China. Nos 6 sites et leurs services commerciaux et techniques sont disponibles pour vous aider dans vos projets.
+    </p>
+    <p>
+      Avec 50 ans d’expérience en extrusion, nous avons franchi une nouvelle étape dans la fabrication additive. Print-Tech® est notre nouveau service de fabrication d’outillage pour composites à grande échelle par l’impression 3D. Impression d’outillages grand format à destination de support d’usinage, d’assemblage et d’outillage de moulage haute température, et de l’optimisation de leur design et conception sans compromettre la qualité.
+    </p>
+    <p>
+      Nous fabriquons une gamme complète de résines pour outillages, Dahltram®, et également de résines de purge, Dahlpram®.
+    </p>
+    <p>
+      Airtech Europe est certifié EN 9100:2018, ISO 9001:2015 et ISO 14001:2015.
+    </p>
+    <p>
+      Merci pour votre intérêt et n’hésitez pas à nous contacter à tout moment.
+    </p>
+
+    <!-- ✅ Profil professionnel à la fin -->
+    <div class="profile-block">
       <h2>Profil professionnel</h2>
       <p>
         Étudiante en Licence Professionnelle QHSSE, je réalise mon stage chez Airtech Europe Sàrl à Differdange (Luxembourg).
@@ -173,17 +217,7 @@
         Je maîtrise les outils Excel avancés, les analyses de risques (AMDEC, 5M), et je suis à l’aise avec les outils numériques.
       </p>
     </div>
-  </header>
 
-  <nav>
-    <a href="index.html" class="active">ACCUEIL</a>
-    <a href="portfolio.html">PORTFOLIO</a>
-    <a href="rapport.html">RAPPORT DE STAGE</a>
-  </nav>
-
-  <main>
-    <h2>Présentation de l’entreprise : Airtech Europe Sàrl</h2>
-    <!-- garde ton texte ici -->
   </main>
 
 </body>
