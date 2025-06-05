@@ -18,7 +18,7 @@
       padding: 40px 60px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
     }
 
@@ -52,12 +52,25 @@
       margin-top: 20px;
     }
 
-    .right-block embed {
-      width: 260px;
-      height: 360px;
-      border-radius: 12px;
+    .right-block {
+      background-color: #1b263b;
+      padding: 30px;
+      border-radius: 16px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-      background-color: white;
+      max-width: 320px;
+      margin-top: 20px;
+    }
+
+    .right-block h2 {
+      color: #f0a500;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .right-block p {
+      color: #e0e0e0;
+      line-height: 1.6;
+      font-size: 0.95rem;
     }
 
     nav {
@@ -124,14 +137,14 @@
         padding: 30px;
       }
 
-      nav a {
-        padding: 14px 20px;
+      .right-block {
+        margin-top: 30px;
+        width: 100%;
+        max-width: 100%;
       }
 
-      .right-block embed {
-        width: 100%;
-        max-width: 300px;
-        margin-top: 30px;
+      nav a {
+        padding: 14px 20px;
       }
     }
   </style>
@@ -145,9 +158,20 @@
       <p>Stage QHSSE – Airtech Europe</p>
       <img src="logo-airtech.png" alt="Logo Airtech" class="logo-airtech">
     </div>
+
+    <!-- ✅ Présentation professionnelle à droite -->
     <div class="right-block">
-      <!-- ✅ PDF intégré ici -->
-      <embed src="photo-cv.pdf" type="application/pdf">
+      <h2>Profil professionnel</h2>
+      <p>
+        Étudiante en Licence Professionnelle QHSSE, je réalise mon stage chez Airtech Europe Sàrl à Differdange (Luxembourg).
+        Mon projet principal porte sur la digitalisation du processus de déclaration des événements HSE.
+      </p>
+      <p>
+        Rigoureuse, impliquée et passionnée par les enjeux de sécurité et d’environnement, je m’investis activement dans les projets d’amélioration continue, de prévention des risques et de gestion documentaire.
+      </p>
+      <p>
+        Je maîtrise les outils Excel avancés, les analyses de risques (AMDEC, 5M), et je suis à l’aise avec les outils numériques.
+      </p>
     </div>
   </header>
 
@@ -159,7 +183,7 @@
 
   <main>
     <h2>Présentation de l’entreprise : Airtech Europe Sàrl</h2>
-    <!-- texte inchangé -->
+    <!-- garde ton texte ici -->
   </main>
 
 </body>
